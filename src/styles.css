@@ -893,7 +893,8 @@ footer {
 .projectImageStack {
   display: grid;
   gap: 32px;
-  margin-top: 38px;
+  width: min(1180px, 74vw);
+  margin: 42px auto 0;
 }
 
 .projectImageFrame {
@@ -907,6 +908,7 @@ footer {
 
 .projectImageFrame img {
   width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -937,6 +939,10 @@ footer {
   .navFloating {
     left: 32px;
     right: 32px;
+  }
+
+  .projectImageStack {
+    width: min(960px, calc(100vw - 120px));
   }
 
   .heroBottom {
