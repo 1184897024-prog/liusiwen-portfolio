@@ -27,12 +27,13 @@ const projects = [
     title: '品牌视觉全案设计',
     tag: 'Brand Visual System',
     image: '/assets/portfolio/page-3.webp',
+    detailImage: '/assets/portfolio-detail/page-3.webp',
     desc: '自然阳光品牌视觉全案，包含品牌规范、线上Banner、产品海报、线下折页与KV延展。',
     pages: [
-      '/assets/portfolio/page-2.webp',
-      '/assets/portfolio/page-3.webp',
-      '/assets/portfolio/page-4.webp',
-      '/assets/portfolio/page-5.webp',
+      '/assets/portfolio-detail/page-2.webp',
+      '/assets/portfolio-detail/page-3.webp',
+      '/assets/portfolio-detail/page-4.webp',
+      '/assets/portfolio-detail/page-5.webp',
     ],
   },
   {
@@ -40,10 +41,11 @@ const projects = [
     title: '活动视觉与UI设计',
     tag: 'Campaign / UI Design',
     image: '/assets/portfolio/page-7.webp',
+    detailImage: '/assets/portfolio-detail/page-7.webp',
     desc: '城市野人跑酷馆活动海报与OceanX海洋馆官网、小程序UI设计，视觉冲击力强，适合数字传播。',
     pages: [
-      '/assets/portfolio/page-6.webp',
-      '/assets/portfolio/page-7.webp',
+      '/assets/portfolio-detail/page-6.webp',
+      '/assets/portfolio-detail/page-7.webp',
     ],
   },
   {
@@ -51,10 +53,11 @@ const projects = [
     title: 'IP形象与包装设计',
     tag: 'IP / Packaging',
     image: '/assets/portfolio/page-8.webp',
+    detailImage: '/assets/portfolio-detail/page-8.webp',
     desc: '足记IP角色、跑酷小人延展与包装设计合集，包含角色设定、应用延展和商业包装表达。',
     pages: [
-      '/assets/portfolio/page-8.webp',
-      '/assets/portfolio/page-9.webp',
+      '/assets/portfolio-detail/page-8.webp',
+      '/assets/portfolio-detail/page-9.webp',
     ],
   },
 ];
@@ -562,7 +565,7 @@ function ProjectDetail({ project, onClose }) {
   return (
     <section className="projectDetail" aria-label={`${project.title}项目详情`}>
       <div className="projectDetailHero">
-        <img src={project.image} alt={`${project.title}封面`} decoding="async" fetchPriority="high" />
+        <img src={project.detailImage ?? project.image} alt={`${project.title}封面`} decoding="async" fetchPriority="high" />
         <div className="projectDetailShade" />
         <div className="projectDetailNav shell">
           <button className="backButton" onClick={onClose} type="button">
